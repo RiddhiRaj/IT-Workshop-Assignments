@@ -1,0 +1,1 @@
+//if we use state method, we can stop method overriding. it will stop methods of method overriding.
