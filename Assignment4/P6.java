@@ -1,3 +1,1 @@
-public class P6 {
-    
-}
+//No, multiple inheritance doesnt support in java classes bcuz it can lead to diamond problem into complex way to solve
