@@ -1,0 +1,99 @@
+<!-- Write an HTML program to create a web page to display the following:  
+ a. Text field to enter Name, Nationality, Age, Phone No, Address 
+ b. Radio button to enter Vaccination Status (Received 1st Dose Only/Received 2nd Dose/Not 
+ Vaccinated) 
+ c. Check box to enter Allergies if known any with fields like Food, Dust, Medicine etc. 
+ d. One drop down list for stream (B.Tech, BCA, M. Tech, MCA) and another drop down list for branch(CSE, ECE, ME, CIVIL etc.) 
+ e. HTML table to display vaccination status of family members with member name, relation, age, date of vaccination etc.  -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+
+<body>
+    <form action="1.html" method="post">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Nationality:</td>
+                <td><input type="text" name="nationality"></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="text" name="age"></td>
+            </tr>
+            <tr>
+                <td>Phone No:</td>
+                <td><input type="text" name="phone"></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <td>Vaccination Status:</td>
+                <td><input type="radio" name="vaccination" value="1st Dose">Received 1st Dose Only</td>
+                <td><input type="radio" name="vaccination" value="2nd Dose">Received 2nd Dose</td>
+                <td><input type="radio" name="vaccination" value="Not Vaccinated">Not Vaccinated</td>
+            </tr>
+            <tr>
+                <td>Allergies:</td>
+                <td><input type="checkbox" name="allergies" value="Food">Food</td>
+                <td><input type="checkbox" name="allergies" value="Dust">Dust</td>
+                <td><input type="checkbox" name="allergies" value="Medicine">Medicine</td>
+            </tr>
+            <tr>
+                <td>Stream:</td>
+                <td>
+                    <select name="stream">
+                        <option value="B.Tech">B.Tech</option>
+                        <option value="BCA">BCA</option>
+                        <option value="M.Tech">M.Tech</option>
+                        <option value="MCA">MCA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Branch:</td>
+                <td>
+                    <select name="branch">
+                        <option value="CSE">CSE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="ME">ME</option>
+                        <option value="CIVIL">CIVIL</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table border="1">
+                        <tr>
+                            <th>Member Name</th>
+                            <th>Relation</th>
+                            <th>Age</th>
+                            <th>Date of Vaccination</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="memberName"></td>
+                            <td><input type="text" name="relation"></td>
+                            <td><input type="text" name="age"></td>
+                            <td><input type="text" name="date"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
