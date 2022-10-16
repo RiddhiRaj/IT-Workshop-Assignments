@@ -1,0 +1,23 @@
+<!-- Write a JavaScript to get the number of Fibonacci elements to be generated from the user using prompt () and display the Fibonacci series using a popup.  -->
+<!-- Path: 10.html -->
+
+<!DOCTYPE html>
+<html><body>
+<form>
+<input type="button" value="Generate Fibonacci series" onclick="fibonacci()">
+</form>
+<script>
+function fibonacci() {
+var n = prompt('Enter the number of Fibonacci elements to be generated:');
+var num1 = 0, num2 = 1, nextTerm, result = 'Fibonacci Series: ';
+for (var i = 1; i <= n; i++) {
+result += num1 + ' ';
+nextTerm = num1 + num2;
+num1 = num2;
+num2 = nextTerm;
+}
+alert(result);
+}
+
+</script>
+</body></html>
