@@ -1,24 +1,35 @@
-// Create 4 threads with priority 1,3,5,7 respectively.
-// Update a counter in each of the threads for
-// 10 ms. Print the final value of count for each thread.
+// Create 4 threads with priority 1,3,5,7 respectively. Update a counter in each of the threads for 10 milliseconds. Print the final value of count for each thread.
 
 public class P07 extends Thread {
+    static int count = 0;
+
     public void run() {
-        System.out.println("Inside run method");
+        for (int i = 0; i < 10; i++) {
+            count++;
+        }
     }
 
-    public static void main(String[] args) {
-        Thread t1 = new Thread(new P07());
-        t1.setPriority(1);
-        Thread t2 = new Thread(new P07());
-        t2.setPriority(3);
-        Thread t3 = new Thread(new P07());
-        t3.setPriority(5);
-        Thread t4 = new Thread(new P07());
-        t4.setPriority(7);
-        t1.start();
-        t2.start();
-        t3.start();
-        t4.start();
+    public static void main(String[] args) throws Exception {
+        P07 ob2 = new P07();
+        P07 ob3 = new P07();
+        P07 ob4 = new P07();
+        P07 ob1 = new P07();
+
+        ob1.setPriority(1);
+        ob2.setPriority(3);
+        ob3.setPriority(5);
+        ob4.setPriority(7);
+
+        ob1.start();
+        ob2.start();
+        ob3.start();
+        ob4.start();
+
+        ob1.join();
+        ob2.join();
+        ob3.join();
+        ob4.join();
+
+        System.out.println("Final Count: " + count);
     }
 }
