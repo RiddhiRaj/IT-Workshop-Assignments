@@ -33,3 +33,6 @@ public class P07 extends Thread {
         System.out.println("Final Count: " + count);
     }
 }
+
+// Output:
+// Final Count: 40
